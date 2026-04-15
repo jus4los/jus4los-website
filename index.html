@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jus4Los Strategic Solutions LLC</title>
+  <meta name="description" content="Veteran-owned logistics, shipping, export support, and supply chain solutions for government and commercial clients." />
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --text:#0f172a;
+      --muted:#64748b;
+      --dark:#0f172a;
+      --dark2:#1e293b;
+      --gold:#d4af37;
+      --card:#ffffff;
+      --border:#e2e8f0;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 24px}
+    .header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:20}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .nav{display:flex;gap:24px;font-size:14px;color:#334155}
+    .nav a:hover{color:#000}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-box{width:44px;height:44px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700}
+    .logo-text strong{display:block;font-size:18px}
+    .logo-text span{font-size:12px;color:var(--muted)}
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 60%,#334155 100%);color:#fff}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 0}
+    .pill{display:inline-block;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 16px;color:#e2e8f0;font-size:14px;margin-bottom:20px}
+    h1{font-size:56px;line-height:1.05;margin:0 0 20px}
+    .hero p{font-size:19px;color:#e2e8f0;max-width:760px}
+    .btn-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;padding:14px 22px;border-radius:18px;font-weight:700}
+    .btn-primary{background:#fff;color:var(--dark)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.25);color:#fff}
+    .hero-side-card,.metric,.snapshot{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);border-radius:28px}
+    .hero-side-card{padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+    .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#cbd5e1}
+    .hero-side-card h3{font-size:30px;margin:12px 0}
+    .hero-side-card p{font-size:14px;margin:0}
+    .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+    .metric{padding:24px}
+    .metric strong{font-size:34px;display:block}
+    .metric span{font-size:14px;color:#e2e8f0}
+    .section{padding:88px 0}
+    .section-head{max-width:760px;margin-bottom:40px}
+    .section-head .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+    .section-head h2{font-size:42px;line-height:1.1;margin:12px 0}
+    .section-head p{font-size:18px;color:#475569}
+    .cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:28px;padding:24px;box-shadow:0 4px 14px rgba(15,23,42,.04)}
+    .card h3{margin:0 0 12px;font-size:22px}
+    .card p{margin:0;color:#475569}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .dark-card{background:var(--dark);color:#fff;border-radius:28px;padding:32px;box-shadow:0 12px 30px rgba(15,23,42,.18)}
+    .snapshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:20px}
+    .label{font-size:13px;color:#94a3b8}
+    .value{margin-top:4px;font-weight:700}
+    ul.clean{padding-left:18px;margin:0}
+    ul.clean li{margin:10px 0;color:#334155}
+    .soft-grid{display:grid;gap:16px}
+    .soft-card{background:#f1f5f9;border-radius:28px;padding:24px}
+    .contact{background:var(--dark);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .contact-card{background:#fff;color:var(--text);border-radius:28px;padding:32px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+    .contact-item{margin:18px 0}
+    .contact-item small{display:block;color:#64748b;margin-bottom:4px}
+    .footer{background:#020617;color:#94a3b8}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;padding:24px 0;font-size:14px}
+    .download-wrap{padding:28px 0}
+    .download-btn{display:inline-block;background:var(--dark);color:#fff;padding:12px 16px;border-radius:14px;font-size:14px}
+    @media (max-width: 960px){
+      .hero-grid,.split,.contact-grid,.cards-4{grid-template-columns:1fr}
+      h1{font-size:42px}
+      .snapshot-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 680px){
+      .nav{display:none}
+      .snapshot-grid,.metrics{grid-template-columns:1fr}
+      .section-head h2{font-size:34px}
+      h1{font-size:36px}
+      .hero-grid{padding:64px 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-box">J4L</div>
+        <div class="logo-text">
+          <strong>JUS4LOS</strong>
+          <span>Strategic Solutions</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill">Veteran-Owned | UEI Registered | SDVOSB (Pending)</div>
+          <h1>Mission-ready logistics, shipping, and export support.</h1>
+          <p>Jus4Los Strategic Solutions LLC is a veteran-owned logistics, shipping, and supply chain firm supporting domestic and international operations with shipment coordination, export readiness, demand planning, inventory optimization, procurement support, and operational improvement services.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#contact">Request a Consultation</a>
+            <a class="btn btn-secondary" href="#capabilities">View Capabilities</a>
+          </div>
+        </div>
+        <div>
+          <div class="hero-side-card">
+            <div class="eyebrow">Core Focus</div>
+            <h3>Logistics, Shipping, Export Support, and Supply Chain Execution</h3>
+            <p>Supporting federal agencies, commercial clients, and prime contractors with scalable logistics and supply chain solutions.</p>
+          </div>
+          <div class="metrics">
+            <div class="metric">
+              <strong>20+ Years</strong>
+              <span>Enterprise supply chain and planning experience</span>
+            </div>
+            <div class="metric">
+              <strong>UEI Registered</strong>
+              <span>Positioned for federal contracting and subcontracting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Services</div>
+          <h2>Services built for execution, visibility, and results</h2>
+          <p>We help organizations improve operational performance through practical, data-backed logistics, shipping, export, and supply chain solutions.</p>
+        </div>
+        <div class="cards-4">
+          <div class="card">
+            <h3>Logistics Coordination</h3>
+            <p>Domestic and international logistics support, shipment planning, routing coordination, and operational follow-through.</p>
+          </div>
+          <div class="card">
+            <h3>Shipping & Freight Support</h3>
+            <p>Freight movement planning, carrier coordination, shipment visibility, and support for reliable transportation execution.</p>
+          </div>
+          <div class="card">
+            <h3>Export Readiness</h3>
+            <p>Export support, market expansion preparation, documentation coordination, and supply chain planning for cross-border growth.</p>
+          </div>
+          <div class="card">
+            <h3>Supply Chain Optimization</h3>
+            <p>Demand planning, inventory strategy, procurement support, and process improvement to reduce cost and improve service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capabilities" class="section" style="background:#fff;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+      <div class="container split">
+        <div>
+          <div class="section-head" style="margin-bottom:24px">
+            <div class="tag">Capabilities</div>
+            <h2>Capability snapshot</h2>
+          </div>
+          <ul class="clean">
+            <li>Logistics coordination and shipping support</li>
+            <li>Domestic and international shipment planning</li>
+            <li>Export readiness and cross-border supply chain support</li>
+            <li>Demand planning and forecasting</li>
+            <li>Inventory optimization and replenishment strategies</li>
+            <li>Government procurement and contract support</li>
+            <li>KPI reporting, analytics, and process improvement</li>
+            <li>ERP systems: SAP, Kinaxis RapidResponse, advanced planning tools</li>
+          </ul>
+        </div>
+        <div class="dark-card">
+          <div class="eyebrow">Company Snapshot</div>
+          <div class="snapshot-grid">
+            <div class="snapshot"><div class="label">Legal Name</div><div class="value">Jus4Los Strategic Solutions LLC</div></div>
+            <div class="snapshot"><div class="label">Business Type</div><div class="value">Veteran-Owned Small Business</div></div>
+            <div class="snapshot"><div class="label">Primary NAICS</div><div class="value">541614</div></div>
+            <div class="snapshot"><div class="label">Location</div><div class="value">Murrieta, California</div></div>
+            <div class="snapshot"><div class="label">Service Area</div><div class="value">Nationwide & International</div></div>
+            <div class="snapshot"><div class="label">Federal Readiness</div><div class="value">SAM.gov / UEI Ready</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container split">
+        <div>
+          <div class="section-head" style="margin-bottom:0">
+            <div class="tag">Directory & Trust</div>
+            <h2>Professional visibility that supports credibility</h2>
+            <p>Jus4Los Strategic Solutions LLC is positioned for business listing visibility, directory consistency, export growth readiness, and contracting credibility. A complete directory footprint helps reinforce trust, strengthens discoverability, and supports outreach to agencies, primes, and commercial partners.</p>
+          </div>
+        </div>
+        <div class="soft-grid">
+          <div class="soft-card">
+            <h3>Directory Readiness</h3>
+            <ul class="clean">
+              <li>Consistent business name, address, phone, and email</li>
+              <li>Professional web presence for verification</li>
+              <li>Supports listing across business and contractor directories</li>
+              <li>Strengthens credibility with buyers and partners</li>
+            </ul>
+          </div>
+          <div class="soft-card">
+            <h3>Differentiators</h3>
+            <ul class="clean">
+              <li>Veteran-owned, mission-driven execution</li>
+              <li>20+ years of enterprise supply chain leadership</li>
+              <li>Experience in regulated, high-volume, mission-critical environments</li>
+              <li>Agile small-business responsiveness with enterprise capability</li>
+            </ul>
+          </div>
+          <div class="soft-card">
+            <h3>Representative Experience</h3>
+            <ul class="clean">
+              <li>Global demand planning and supply strategy</li>
+              <li>Multi-channel shipment and inventory coordination</li>
+              <li>Cross-functional S&amp;OP alignment</li>
+              <li>Operational support across regulated and mission-critical environments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="tag" style="color:#cbd5e1">Contact</div>
+          <h2 style="color:#fff">Let’s connect</h2>
+          <p style="font-size:18px;color:#cbd5e1;max-width:640px">Ready to support logistics operations, shipping coordination, export growth, and contract-facing operational improvement efforts.</p>
+        </div>
+        <div class="contact-card">
+          <div style="font-size:24px;font-weight:700">Jus4Los Strategic Solutions LLC</div>
+          <div class="contact-item"><small>Email</small><strong>carlos@jus4los.com</strong></div>
+          <div class="contact-item"><small>Phone</small><strong>840-209-8260</strong></div>
+          <div class="contact-item"><small>Location</small><strong>Murrieta, California</strong></div>
+          <div style="margin-top:28px">
+            <a class="btn" style="background:#0f172a;color:#fff" href="mailto:carlos@jus4los.com">Email Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="container download-wrap">
+    <a class="download-btn" href="jus4los-logo.svg" download>Download Logo (SVG)</a>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Jus4Los Strategic Solutions LLC. All rights reserved.</div>
+      <div>Veteran-Owned | Logistics, Shipping & Export Support</div>
+    </div>
+  </footer>
+</body>
+</html>
