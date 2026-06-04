@@ -25,9 +25,17 @@
     .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
     .nav{display:flex;gap:24px;font-size:14px;color:#334155}
     .nav a:hover{color:#000}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo-box{width:44px;height:44px;border-radius:12px;background:var(--dark);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700}
-    .logo-text strong{display:block;font-size:18px}
+    .logo{display:flex;align-items:center;gap:16px}
+    .main-logo{
+      width:160px;
+      height:auto;
+      border-radius:50%;
+      display:block;
+      box-shadow:0 8px 24px rgba(0,0,0,.25);
+      transition:transform .25s ease
+    }
+    .main-logo:hover{transform:scale(1.04)}
+    .logo-text strong{display:block;font-size:18px;letter-spacing:.02em}
     .logo-text span{font-size:12px;color:var(--muted)}
     .hero{background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 60%,#334155 100%);color:#fff}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 0}
@@ -85,6 +93,10 @@
       .section-head h2{font-size:34px}
       h1{font-size:36px}
       .hero-grid{padding:64px 0}
+      .main-logo{width:110px}
+      .logo-text strong{font-size:15px}
+      .logo-text span{font-size:11px}
+      .header-inner{gap:16px}
     }
   </style>
 </head>
@@ -92,10 +104,12 @@
   <header class="header">
     <div class="container header-inner">
       <div class="logo">
-        <div class="logo-box">J4L</div>
+        <a href="index.html" aria-label="Jus4Los Strategic Solutions LLC Home">
+          <img src="Jus4Los_Final_Logo.png" alt="Jus4Los Strategic Solutions LLC Logo" class="main-logo">
+        </a>
         <div class="logo-text">
-          <strong>JUS4LOS</strong>
-          <span>Strategic Solutions | Federal Services Division</span>
+          <strong>JUS4LOS STRATEGIC SOLUTIONS LLC</strong>
+          <span>Veteran-Owned Small Business | Logistics • Procurement • Supply Chain</span>
         </div>
       </div>
       <nav class="nav">
@@ -113,6 +127,12 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
+          <div style="text-align:center;margin-bottom:30px;">
+            <img src="Jus4Los_Final_Logo.png"
+                 alt="Jus4Los Strategic Solutions LLC Logo"
+                 style="max-width:450px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.35));">
+          </div>
+
           <div class="pill">
             SBA Certified SDVOSB | VOSB | UEI: SJT5DSQUK786 | CAGE: 1VTU8 | Murrieta Business License #36986 | SAM.gov Active
           </div>
